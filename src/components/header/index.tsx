@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 import { shade } from "polished";
-
-import Logo from "../../assets/Logo.png";
 import { ContainerHeader, HeaderLeft } from "./styles";
 import RoutesPage from "../../routes/routesPage";
+
+const logo = require("../../assets/logo.png") as string;
 
 interface Props {
   toggleTheme(): void;
 }
 
-const Header: React.FC<Props> = ({ toggleTheme }) => {
+function Header({ toggleTheme }: Props) {
   const { colors, title } = useContext(ThemeContext);
 
   return (
@@ -19,7 +19,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       <HeaderLeft>
         <img
           style={{ cursor: "pointer" }}
-          src={Logo}
+          src={logo}
           width={65}
           onClick={() => RoutesPage.navigate("/")}
           alt="website logo"
@@ -40,6 +40,6 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       </div>
     </ContainerHeader>
   );
-};
+}
 
 export default Header;
