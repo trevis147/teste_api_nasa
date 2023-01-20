@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 import { shade } from "polished";
 import { ContainerHeader, HeaderLeft } from "./styles";
 import RoutesPage from "../../routes/routesPage";
-
-const logo = require("../../assets/logo.png") as string;
 
 interface Props {
   toggleTheme(): void;
@@ -16,16 +14,12 @@ function Header({ toggleTheme }: Props) {
 
   return (
     <ContainerHeader>
-      <HeaderLeft>
-        <img
-          style={{ cursor: "pointer" }}
-          src={logo}
-          width={65}
-          onClick={() => RoutesPage.navigate("/")}
-          alt="website logo"
-        />
-      </HeaderLeft>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Switch
           onChange={toggleTheme}
           checked={title === "dark"}

@@ -10,6 +10,7 @@ export const ContainerHeader = styled.div`
   justify-content: space-between;
   padding: 0 30px;
   margin-bottom: 10px;
+  flex-direction: row-reverse;
 `;
 
 export const HeaderLeft = styled.div`
