@@ -1,9 +1,18 @@
-import { ChangeEvent, MouseEventHandler } from "react";
+import { ChangeEvent } from "react";
 
 export interface HomeContextProps {
-  getImageData: (value: string) => void;
-  search: string;
+  getImageData: () => void;
   handlerSearch: (evt: ChangeEvent<HTMLInputElement>) => void;
+  visibleImg: string[] | undefined;
+  handleLoadMore: () => void;
+}
+
+export interface returnImgApiNasa {
+  data: {
+    collection: {
+      items: [{ links: [{ href: string; id: string }] }];
+    };
+  };
 }
 
 export interface HomeProviderProps {
