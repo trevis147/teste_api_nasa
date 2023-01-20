@@ -40,7 +40,7 @@ function Input({
           required={required}
           onChange={onChange}
         />
-        <SearchButton type="button" onClick={(e) => onClick(e)}>
+        <SearchButton type="button" onClick={(e: any) => onClick(e)}>
           {btnText}
         </SearchButton>
       </Form>

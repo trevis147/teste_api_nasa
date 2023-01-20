@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEventHandler, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { HomeContext } from ".";
 import { HomeProviderProps, returnImgApiNasa } from "./interface-props";
 import { searchImageNasa } from "./service";
@@ -17,9 +17,7 @@ export function HomeProvider({ children }: HomeProviderProps) {
 
     setImageLiks(links);
 
-    setVisibleImg(
-      visibleImg.concat(links.slice(visibleImg.length, visibleImg.length + 4))
-    );
+    setVisibleImg(links.slice(visibleImg.length, visibleImg.length + 4));
   };
 
   const handlerSearch = (evt: ChangeEvent<HTMLInputElement>) => {

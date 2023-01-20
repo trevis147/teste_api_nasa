@@ -7,7 +7,6 @@ export async function searchImageNasa(
   const ret = (await api.get(
     `https://images-api.nasa.gov/search?q=${value}`
   )) as returnImgApiNasa;
-  console.log(ret);
 
   return ret;
 }

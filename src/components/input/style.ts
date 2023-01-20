@@ -17,7 +17,7 @@ export const Container = styled.body`
   min-height: 100%;
 `;
 
-export const Form = styled.form`
+export const Form = styled.div`
   position: relative;
   width: 30rem;
   background: ${(props) => props.theme.colors.primary};
